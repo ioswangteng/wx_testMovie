@@ -11,7 +11,6 @@ Page({
     movie: {},
     directors: [],
     casts: []
-
   },
 
   /**
