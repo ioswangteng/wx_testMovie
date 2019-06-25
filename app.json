@@ -1,0 +1,18 @@
+{
+  "pages": [
+   
+    "pages/movie/movie",
+    "pages/cinema/cinema",
+    "pages/me/me",
+    "pages/movieDetail/movieDetail",
+    "pages/index/index",
+    "pages/logs/logs"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#1A1A1A",
+    "navigationBarTitleText": "我的电影",
+    "navigationBarTextStyle": "white"
+  },
+  "sitemapLocation": "sitemap.json"
+}

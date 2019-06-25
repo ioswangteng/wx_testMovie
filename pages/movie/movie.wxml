@@ -1,0 +1,42 @@
+<!--pages/movie/movie.wxml-->
+<view class='nav'>
+  <view id='0' class="{{currentTab == 0 ? 'select' : 'normal' }} " bindtap='switchNav'>上映</view>
+  <view class='line'>|</view>
+  <view id='1' class="{{currentTab == 1 ? 'select':'normal'}}" bindtap='switchNav'>影院</view>
+  <view class='line'>|</view>
+  <view id='2' class="{{currentTab == 2 ? 'select':'normal'}}" bindtap='switchNav'>我看</view>
+</view>
+<swiper current='{{currentTab}}' style="height:{{winHeight}}px">
+  <swiper-item>
+
+    <view class='haibao'>
+      <swiper indicator-dots='{{indicatorDots}}' autoplay='{{autoplay}}' interval='{{interval}}' duration='{{duration}}' style='height:148rpx;'>
+        <block wx:for="{{imgUrls}}" wx:key="">
+          <swiper-item>
+            <image src="{{item}}" class="silde-image" style="width:100%;height:148rpx;background-color: #777888;"></image>
+          </swiper-item>
+        </block>
+      </swiper>
+    </view>
+
+    <view class='items'>
+      <block wx:for="{{movies}}" wx:key="{{item.id}}">
+        <view class='item' bindtap='loadDetail' id='{{item.id}}'>
+          <view>
+            <image src='{{item.images.medium}}' style='width:200rpx;height:300rpx' mode='aspectFit'></image>
+          </view>
+
+          <view class='name'>
+            <text>{{item.title}}</text>
+          </view>
+        </view>
+      </block>
+    </view>
+  </swiper-item>
+  <swiper-item>
+    <view>影院的内容</view>
+  </swiper-item>
+  <swiper-item>
+    <view>我看的内容</view>
+  </swiper-item>
+</swiper>

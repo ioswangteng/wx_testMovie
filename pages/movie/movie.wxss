@@ -1,0 +1,44 @@
+/* pages/movie/movie.wxss */
+.nav{
+  display: flex;
+  flex-direction: row;
+  background-color: #222222;
+}
+.select{
+  width: 32%;
+  height: 90rpx;
+  line-height: 90rpx;
+  text-align: center;
+  color: #ffffff;
+  font-size: 26rpx;
+  border-bottom: 20rpx solid #777777;
+}
+.normal{
+  width: 32%;
+  height: 90rpx;
+  line-height: 90rpx;
+  text-align: center;
+  color: #ffffff;
+  font-size: 26rpx;
+}
+.line{
+  height: 90rpx;
+  line-height: 90rpx;
+  color: #666666;
+}
+.items{
+  background-color: white;
+  height:100%;
+}
+.item{
+  width: 33.3%;
+  height: 400rpx;
+  margin-top: 20rpx;
+  text-align: center;
+  float: left;
+}
+.name{
+  font-size: 28rpx;
+  font-weight: bold;
+  margin: 10rpx;
+}
