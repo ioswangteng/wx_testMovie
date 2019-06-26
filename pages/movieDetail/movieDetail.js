@@ -39,7 +39,7 @@ Page({
         success: function (res) {
           {
             page.setData({ winWidth: res.windowWidth });
-            page.setData({ winHeight: res.windowHeight });
+            page.setData({ winHeight: res.windowHeight-30 });
           }
         },
       })
@@ -48,6 +48,9 @@ Page({
   switchNav: function (res) {
     var id = res.currentTarget.id;
     this.setData({ currentTab: id });
+  },
+  switchTap:function(res){
+    console.log(res);
   },
   /**
    * 生命周期函数--监听页面初次渲染完成

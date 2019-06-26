@@ -96,3 +96,23 @@
   line-height: 100px;
   margin-left: 10px;
 }
+.photo{
+  width: 33%;
+}
+.bottomNav{
+  display: flex;
+  flex-direction: row;
+  background-color: #505963;
+  height: 45px;
+  line-height: 45px;
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+}
+.bottomNav view{
+  margin: 0 auto;
+}
+.common{
+  font-size: 13px;
+  color: #ffffff;
+}
