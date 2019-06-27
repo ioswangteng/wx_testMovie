@@ -6,8 +6,8 @@
   <view class='line'>|</view>
   <view id='2' class="{{currentTab == 2 ? 'select':'normal'}}" bindtap='switchNav'>我看</view>
 </view>
-<swiper current='{{currentTab}}' style="height:{{winHeight}}px">
-  <swiper-item>
+<swiper current='{{currentTab}}' style="height:{{winHeight}}rpx">
+  <swiper-item >
 
     <view class='haibao'>
       <swiper indicator-dots='{{indicatorDots}}' autoplay='{{autoplay}}' interval='{{interval}}' duration='{{duration}}' style='height:148rpx;'>

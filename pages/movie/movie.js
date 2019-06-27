@@ -12,6 +12,7 @@ Page({
     interval: 5000,
     duration: 1000,
     movies: [],
+    rpxR:1,
     imgUrls: [
       '../images/bg.jpg',
       '../images/cloud.jpg',
@@ -31,8 +32,17 @@ Page({
     var page = this;
     wx.getSystemInfo({
       success: function (res) {
-        page.setData({ winWidth: res.windowWidth });
-        page.setData({ winHeight: res.windowHeight });
+
+        var clientHeight = res.windowHeight,
+          clientWidth = res.windowWidth,
+          rpxR = 750 / clientWidth;
+        page.setData({ rpxR: rpxR });
+        var helfH = (clientHeight-45) *rpxR;
+        var helfW = clientWidth * rpxR;
+
+
+        page.setData({ winWidth: helfW});
+        page.setData({ winHeight: helfH});
         console.log(page.data.winHeight);
       },
     })
@@ -52,11 +62,11 @@ Page({
         var subjects = res.data.subjects;
         var size = subjects.length;
         var len = parseInt(size / 3);
-
-        
+        var helfH = (((len + 1) * 230) - 45) * page.data.rpxR;
+      
         console.log(subjects);
         page.setData({ movies: subjects });
-        page.setData({ winHeight: (len + 1) * 230 });
+        page.setData({ winHeight: helfH});
 
       }
     })
